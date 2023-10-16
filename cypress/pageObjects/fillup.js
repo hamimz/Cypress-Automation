@@ -1,0 +1,58 @@
+class fillup
+{
+    setTitle(){
+        cy.get("#id_gender1").click();
+    }
+    setPassword(password){
+        cy.get("#password").type(password);
+    }
+    setDate(){
+        cy.get("#days").select('19');
+        cy.get("#months").select('February');
+        cy.get("#years").select('2000');
+    }
+    setSubscriptions(){
+        cy.get("#newsletter").click();
+        cy.get("#optin").click();
+    }
+    setFirstName(firstname){
+        cy.get("#first_name").type(firstname);
+    }
+    setLastName(lastname){
+        cy.get("#last_name").type(lastname);
+    }
+    setCompany(company){
+        cy.get("#company").type(company);
+    }
+    setAddress(adress){
+        cy.get("#address1").type(adress)
+    }
+    setSecondAddress(secondadress){
+        cy.get("#address2").type(secondadress)
+    }
+    setCountry(){
+        cy.get("#country").select('Canada');
+    }
+    setState(state){
+        cy.get("#state").type(state);
+    }
+    setCity(city){
+        cy.get("#city").type(city);
+    }
+    setZipcode(zipcode){
+        cy.get("#zipcode").type(zipcode);
+    }
+    setMobile(mobile){
+        cy.get("#mobile_number").type(mobile);
+    }
+    clickCreateAccount(){
+        cy.get(".btn.btn-default[data-qa='create-account']").click();
+    }
+    verifyAccount(){
+        cy.get(".btn.btn-primary").should('have.text','Continue');
+        cy.get(".btn.btn-primary").click();
+    }
+
+}
+
+export default fillup;
