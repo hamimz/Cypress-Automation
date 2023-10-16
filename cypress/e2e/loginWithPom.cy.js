@@ -9,7 +9,7 @@ describe('pom',()=>{
         cy.visit("https://automationexercise.com/signup");
         const signUser = new login();
         signUser.setUserName("Mahesh");
-        signUser.setEmail('mahe3276415111@gmail.com');
+        signUser.setEmail('mahesh909193@gmail.com');
         signUser.clickSignUp();
         signUser.verifySignUp();
 
